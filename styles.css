@@ -87,6 +87,11 @@ h1 {
     padding: 12px 0 12px 0;
 }
 
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
 .svg-icon {
     filter: invert(38%) sepia(32%) saturate(383%) hue-rotate(337deg) brightness(99%) contrast(86%);
 }
