@@ -62,14 +62,25 @@ body {
 h1 {
     font-size: 4em;
     font-weight: 600;
+    color: var(--secondary-color);
 }
 
 .header {
     margin-bottom: auto;
+    background-color: var(--primary-color);
+    width: 100%;
+    padding-bottom: 24px;
+}
+
+.body {
+    background-color: var(--bg-color);
 }
 
 .footer {
     margin-top: auto;
+    width: 100%;
+    padding-top: 24px;
+    background-color: var(--primary-color);
 }
 
 .svg-icon {
