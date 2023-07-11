@@ -75,7 +75,7 @@ h1 {
 
 .header {
     margin-bottom: auto;
-    padding-bottom: 24px;
+    padding: 4px 0 20px 0;
 }
 
 .body {
@@ -84,7 +84,7 @@ h1 {
 
 .footer {
     margin-top: auto;
-    padding-top: 24px;
+    padding: 12px 0 12px 0;
 }
 
 .svg-icon {
