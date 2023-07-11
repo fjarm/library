@@ -87,6 +87,17 @@ h2 {
     background-color: var(--bg-color);
 }
 
+.circle {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: var(--secondary-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .footer {
     margin-top: auto;
     padding: 12px 0 12px 0;
