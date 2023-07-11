@@ -81,6 +81,8 @@ h2 {
 .header {
     margin-bottom: auto;
     padding: 4px 0 20px 0;
+
+    box-shadow: 0px 4px 3px 0px rgba(52, 40, 34, 0.5);
 }
 
 .body {
