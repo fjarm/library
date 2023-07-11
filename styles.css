@@ -53,3 +53,7 @@ table {
 body {
     font-family: 'EB Garamond', serif;
 }
+
+.svg-icon {
+    filter: invert(38%) sepia(32%) saturate(383%) hue-rotate(337deg) brightness(99%) contrast(86%);
+}
