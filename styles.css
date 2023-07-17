@@ -124,8 +124,9 @@ table {
 
 th, td {
     vertical-align: middle;
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 1px solid #ddd;
     font-weight: 700;
+    padding: 8px 0 8px 0;
 }
 
 th {
@@ -139,6 +140,10 @@ td {
     text-align: center;
     height: 20px;
     font-size: 1.1rem;
+}
+
+tr:hover {
+    background-color: var(--secondary-color);
 }
 
 .footer {
