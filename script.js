@@ -14,11 +14,11 @@ function addBookToLibrary() {
 const bookButton = document.querySelector('.new-book-button');
 
 bookButton.addEventListener('click', () => {
-    const bookForm = document.querySelector('.new-book-form');
+    const bookForm = document.querySelector('.form-container');
 
-    if (bookForm.style.display === 'none') {
-        bookForm.style.display = 'block';
+    if (bookForm.style.visibility === 'hidden') {
+        bookForm.style.visibility = 'visible';
     } else {
-        bookForm.style.display = 'none';
+        bookForm.style.visibility = 'hidden';
     }
 })
