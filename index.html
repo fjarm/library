@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +14,7 @@
     <div class="header">
         <h1 class="title">My Library</h1>
     </div>
-    <button class="new-book-button" onclick="openForm()">New Book</button>
+    <button class="new-book-button">New Book</button>
     <div class="body" style="overflow-y: auto;">
         <table class="book-table">
             <tr>
@@ -31,9 +30,15 @@
                 <td>Read</td>
             </tr>
         </table>
+        <form class="new-book-form">
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+        </form>
     </div>
     <div class="footer">
         <h2><a href="https://github.com/fjarm/library">Github</a></h2>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
