@@ -91,6 +91,7 @@ h2 {
 
 .new-book-button {
     padding: 12px 20px;
+    width: 160px;
     background-color: var(--primary-color);
     color: var(--light-secondary-color);
     border: none;
