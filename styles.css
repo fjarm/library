@@ -60,6 +60,7 @@ body {
     align-items: center;
     min-height: 100vh;
     box-sizing: border-box;
+    background-color: var(--light-secondary-color);
 }
 
 h1 {
@@ -89,8 +90,7 @@ h2 {
 }
 
 .new-book-button {
-    padding: 20px 20px;
-    margin-left: auto;
+    padding: 12px 20px;
     background-color: var(--primary-color);
     color: var(--light-secondary-color);
     border: none;
@@ -99,6 +99,7 @@ h2 {
     font-family: 'EB Garamond', serif;
     font-weight: 600;
     font-size: 1.3rem;
+    margin-bottom: auto;
 }
 
 .new-book-button:hover {
@@ -111,6 +112,9 @@ h2 {
 
 .body {
     background-color: var(--bg-color);
+    border: 2px solid var(--primary-active);
+    width: 50%;
+    min-height: 70vh;
 }
 
 .circle {
