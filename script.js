@@ -7,6 +7,7 @@ const theHobbit = new Book(
 )
 
 let myLibrary = [aGameOfThrones, theHobbit];
+let tempLibrary = [aGameOfThrones, theHobbit];
 
 function Book(title, author, pages, read) {
     this.title = title
@@ -19,7 +20,7 @@ function addBookToLibrary() {
     const table = document.querySelector(".table-body");
     const rows = table.querySelectorAll("tr");
 
-    myLibrary.forEach(book => {
+    tempLibrary.forEach(book => {
         let row = document.createElement('tr');
 
         Object.values(book).forEach(text => {
@@ -30,14 +31,11 @@ function addBookToLibrary() {
         })
 
         table.appendChild(row);
+        tempLibrary = [];
     })
 }
 
-addBookToLibrary();
-
-const bookButton = document.querySelector('.new-book-button');
-
-bookButton.addEventListener('click', () => {
+function toggleFormVisibility() {
     const bookForm = document.querySelector('.form-container');
 
     if (bookForm.style.visibility === 'hidden') {
@@ -47,4 +45,37 @@ bookButton.addEventListener('click', () => {
         bookForm.style.visibility = 'hidden';
         bookButton.textContent = 'New Book';
     }
+}
+
+addBookToLibrary();
+
+const bookButton = document.querySelector('.new-book-button');
+
+bookButton.addEventListener('click', () => {
+    toggleFormVisibility();
+})
+
+const submitButton = document.querySelector('.submit-button');
+
+submitButton.addEventListener('click', () => {
+    let newTitle = document.getElementById("title").value;
+    let newAuthor = document.getElementById("author").value;
+    let newPages = document.getElementById("pages").value;
+    let newRead = document.getElementById("read").checked;
+    if (newRead === true) {
+        newRead = "Yes"
+    } else {
+        newRead = "No"
+    }
+
+    let newBook = new Book(
+        newTitle, newAuthor, newPages, newRead
+    )
+
+    myLibrary.push(newBook);
+    tempLibrary.push(newBook);
+    addBookToLibrary();
+    
+    toggleFormVisibility();
+    document.getElementById("new-book-form").reset();
 })

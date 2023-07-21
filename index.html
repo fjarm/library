@@ -31,14 +31,14 @@
             </tbody>
         </table>
         <div class="form-container" style="visibility: hidden;">
-            <form class="new-book-form">
-                <input type="text" id="title" placeholder="Book Title"/>
-                <input type="text" id="author" placeholder="Author"/>
-                <input type="text" id="pages" placeholder="Page Count"/>
+            <form class="new-book-form" onsubmit="event.preventDefault()" id="new-book-form">
+                <input type="text" id="title" placeholder="Book Title" required/>
+                <input type="text" id="author" placeholder="Author" required/>
+                <input type="number" id="pages" placeholder="Page Count" required/>
                 <div class="full-width">
                     <label for="read" id="read-text">Read?</label>
                     <input type="checkbox" id="read">
-                    <button type="submit">Add Book</button>
+                    <button class="submit-button" type="submit">Add Book</button>
                 </div>
             </form>
         </div>
