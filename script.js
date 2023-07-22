@@ -62,6 +62,11 @@ submitButton.addEventListener('click', () => {
     let newAuthor = document.getElementById("author").value;
     let newPages = document.getElementById("pages").value;
     let newRead = document.getElementById("read").checked;
+    if (newTitle === "" || newAuthor === "" || newPages === "") {
+        alert("Please fill empty fields.")
+        return
+    }
+    
     if (newRead === true) {
         newRead = "Yes"
     } else {
