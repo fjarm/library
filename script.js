@@ -75,7 +75,30 @@ submitButton.addEventListener('click', () => {
     myLibrary.push(newBook);
     tempLibrary.push(newBook);
     addBookToLibrary();
+    addRowHandlers();
     
-    toggleFormVisibility();
     document.getElementById("new-book-form").reset();
+    toggleFormVisibility();
 })
+
+function addRowHandlers() {
+    var table = document.querySelector(".book-table");
+    var rows = table.getElementsByTagName("tr");
+    for (i = 0; i < rows.length; i++) {
+      var currentRow = table.rows[i];
+      var createClickHandler = function(row) {
+        return function() {
+          var cell = row.getElementsByTagName("td")[3];
+          var id = cell.textContent;
+          if (id === "Yes") {
+            cell.textContent = "No";
+          } else {
+            cell.textContent = "Yes";
+          }
+        };
+      };
+      currentRow.onclick = createClickHandler(currentRow);
+    }
+}
+
+addRowHandlers();
