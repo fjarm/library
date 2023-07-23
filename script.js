@@ -129,3 +129,20 @@ toggleReadButton.addEventListener('click', () => {
         readCell.textContent = "Yes";
     }
 });
+
+const deleteBookButton = document.getElementById("delete-book-button");
+
+deleteBookButton.addEventListener("click", () => {
+    let selectedBookName = selectedBook.getElementsByTagName("td")[0];
+
+    let table = document.querySelector(".book-table");
+    let rows = table.getElementsByTagName("tr");
+    for (i = 0; i < rows.length; i++) {
+        let currentRow = table.rows[i];
+        if (currentRow.getElementsByTagName("td")[0] === selectedBookName) {
+            table.deleteRow(i);
+            openBookMenu();
+            return;
+        }
+    }
+})
