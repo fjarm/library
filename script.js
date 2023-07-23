@@ -49,7 +49,8 @@ function toggleFormVisibility() {
 
 addBookToLibrary();
 
-const bookButton = document.querySelector('.new-book-button');
+const bookButton = document.querySelector(".new-book-button");
+const removeButton = document.querySelector(".remove-book-button");
 
 bookButton.addEventListener('click', () => {
     toggleFormVisibility();

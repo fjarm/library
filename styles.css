@@ -219,6 +219,31 @@ button[type='submit'] {
     justify-self: start;
 }
 
+.book-edit-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 1rem;
+    gap: 2rem;
+    border: 4px solid var(--primary-color);
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 3px 3px 2px 0px rgba(62, 48, 40, 1);
+    justify-content: center;
+    width: 500px;
+}
+
+.book-edit-button {
+    padding: 10px 10px;
+    width: 140px;
+    background-color: var(--primary-color);
+    color: var(--light-secondary-color);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 2px rgba(52, 40, 34, 0.5);
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
 
 .footer {
     margin-top: auto;
