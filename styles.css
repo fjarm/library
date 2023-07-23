@@ -124,6 +124,15 @@ h2 {
 table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.big-column {
+    width: 140px;
+}
+
+.small-column {
+    width: 60px;
 }
 
 th, td {
@@ -131,6 +140,7 @@ th, td {
     border-bottom: 1px solid #ddd;
     font-weight: 700;
     padding: 8px 0 8px 0;
+    overflow: hidden;
 }
 
 th {
