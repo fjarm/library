@@ -106,11 +106,13 @@ h2 {
     margin-bottom: auto;
 }
 
-.new-book-button:hover {
+button:hover,
+button[type='submit']:hover {
     background-color: var(--primary-hover);
 }
 
-.new-book-button:active {
+button:active,
+button[type='submit']:active {
     background-color: var(--primary-active);
 }
 
