@@ -109,15 +109,8 @@ function addRowHandlers() {
             if (currentRow === table.rows[0]) {
                 return;
             }
-            selectedBook = currentRow;
+            selectedBook = row;
             openBookMenu();
-        //   let cell = row.getElementsByTagName("td")[3];
-        //   let id = cell.textContent;
-        //   if (id === "Yes") {
-        //     cell.textContent = "No";
-        //   } else {
-        //     cell.textContent = "Yes";
-        //   }
         };
       };
       currentRow.onclick = createClickHandler(currentRow);
@@ -125,3 +118,14 @@ function addRowHandlers() {
 }
 
 addRowHandlers();
+
+const toggleReadButton = document.getElementById("toggle-read-button");
+
+toggleReadButton.addEventListener('click', () => {
+    let readCell = selectedBook.getElementsByTagName("td")[3];
+    if (readCell.textContent === "Yes") {
+        readCell.textContent = "No";
+    } else {
+        readCell.textContent = "Yes";
+    }
+});
