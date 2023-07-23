@@ -146,3 +146,9 @@ deleteBookButton.addEventListener("click", () => {
         }
     }
 })
+
+const closeBookEditButton = document.getElementById("close-book-edit-button");
+
+closeBookEditButton.addEventListener("click", () => {
+    openBookMenu();
+})
