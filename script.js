@@ -16,6 +16,8 @@ function Book(title, author, pages, read) {
     this.read = read
 }
 
+let selectedBook = "";
+
 function addBookToLibrary() {
     const table = document.querySelector(".table-body");
     const rows = table.querySelectorAll("tr");
@@ -44,6 +46,16 @@ function toggleFormVisibility() {
     } else {
         bookForm.style.visibility = 'hidden';
         bookButton.textContent = 'New Book';
+    }
+}
+
+function openBookMenu() {
+    const bookEditMenu = document.querySelector('.book-edit-container')
+
+    if (bookEditMenu.style.visibility === "hidden") {
+        bookEditMenu.style.visibility = "visible";
+    } else {
+        bookEditMenu.style.visibility = "hidden";
     }
 }
 
@@ -88,19 +100,24 @@ submitButton.addEventListener('click', () => {
 })
 
 function addRowHandlers() {
-    var table = document.querySelector(".book-table");
-    var rows = table.getElementsByTagName("tr");
+    let table = document.querySelector(".book-table");
+    let rows = table.getElementsByTagName("tr");
     for (i = 0; i < rows.length; i++) {
-      var currentRow = table.rows[i];
-      var createClickHandler = function(row) {
+      let currentRow = table.rows[i];
+      let createClickHandler = function(row) {
         return function() {
-          var cell = row.getElementsByTagName("td")[3];
-          var id = cell.textContent;
-          if (id === "Yes") {
-            cell.textContent = "No";
-          } else {
-            cell.textContent = "Yes";
-          }
+            if (currentRow === table.rows[0]) {
+                return;
+            }
+            selectedBook = currentRow;
+            openBookMenu();
+        //   let cell = row.getElementsByTagName("td")[3];
+        //   let id = cell.textContent;
+        //   if (id === "Yes") {
+        //     cell.textContent = "No";
+        //   } else {
+        //     cell.textContent = "Yes";
+        //   }
         };
       };
       currentRow.onclick = createClickHandler(currentRow);
